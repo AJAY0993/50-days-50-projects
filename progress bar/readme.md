@@ -8,7 +8,8 @@ This project demonstrates a simple multi-step progress indicator implemented usi
 
 ## Preview
 
-![Progress Indicator Preview](/images/progress-indicator-preview.gif)
+![Progress Indicator Preview](https://github.com/AJAY0993/50-days-50-projects/assets/128742355/bc9d51a4-f5eb-4ef5-af2a-a2df7d5a98f1)
+
 
 ## Features
 
