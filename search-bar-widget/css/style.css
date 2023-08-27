@@ -1,0 +1,92 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     overflow: hidden;
+     height: 100vh;
+     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1);
+
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {}
+
+.search {
+     position: relative;
+     background-color: #fff;
+     border-radius: 24px;
+}
+
+.input {
+     background-color: #fff;
+     border: none;
+     font-size: 18px;
+     height: 50px;
+     width: 50px;
+     border-top-left-radius: 24px;
+     border-bottom-left-radius: 24px;
+     padding: 8px;
+     transition: all .3s ease-in-out;
+}
+
+.btn {
+     position: absolute;
+     height: 50px;
+     width: 50px;
+     left: 0;
+     background-color: #fff;
+     border: none;
+     border-top-right-radius: 24px;
+     border-bottom-right-radius: 24px;
+     transition: all .3s ease-in-out;
+     cursor: pointer;
+}
+
+.input:focus {
+     outline: none;
+}
+
+.btn:focus {
+     outline: none;
+}
+
+.search.active .input {
+     width: 200px;
+}
+
+.search.active .btn {
+     transform: translateX(198px);
+}
+
+footer {}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
