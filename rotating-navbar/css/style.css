@@ -1,0 +1,128 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     height: 100vh;
+     background-image: linear-gradient(to bottom, #35A29F 0%, #35A29F 50%, #088395 50%, #088395 100%);
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {}
+
+nav {
+     width: 50px;
+     display: flex;
+     justify-content: space-evenly;
+     align-items: center;
+     transition: all .6s linear;
+}
+
+nav.active {
+     width: 350px;
+     height: 50px;
+}
+
+ul {
+     display: flex;
+     list-style-type: none;
+     transition: all .6s linear;
+     position: relative;
+     right: -100%;
+}
+
+ul li {
+     margin: 0 5px;
+     opacity: 0;
+     transition: all .6s linear;
+}
+
+ul li a {
+     font-size: 1.2rem;
+     color: white;
+     text-decoration: none;
+}
+
+nav.active ul {
+     right: 0;
+}
+
+nav.active ul li {
+     transform: rotateY(720deg);
+     opacity: 1;
+}
+
+
+button {
+     display: inline-block;
+     cursor: pointer;
+     border: none;
+     height: 30px;
+     width: 30px;
+     position: relative;
+     margin: auto;
+     background: transparent;
+     transition: all .6s linear;
+}
+
+.line {
+     margin: 0;
+     padding: 0;
+     height: 2px;
+     width: 20px;
+     background: black;
+     position: absolute;
+     left: 5px;
+     transition: all .6s linear;
+}
+
+
+
+.line-1 {
+     top: 8px;
+}
+
+.line-2 {
+     bottom: 8px;
+}
+
+nav.active .line-1 {
+     transform: rotate(-765deg);
+     transform-origin: right;
+}
+
+nav.active .line-2 {
+     transform: rotate(765deg);
+     transform-origin: right;
+}
+
+footer {}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
