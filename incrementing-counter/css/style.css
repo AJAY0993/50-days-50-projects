@@ -1,0 +1,69 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Roboto+Mono&display=swap');
+
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 100vh;
+     background-color: #F1EFEF;
+     font-family: 'Mulish', sans-serif;
+     font-family: 'Roboto Mono', monospace;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {}
+
+.container {
+     display: flex;
+}
+
+.counter {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     margin: 30px 50px;
+}
+
+i {
+     font-size: 2rem;
+}
+
+span {
+     margin-top: 10px;
+     font-size: 2rem;
+     font-weight: 600;
+}
+
+footer {}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
