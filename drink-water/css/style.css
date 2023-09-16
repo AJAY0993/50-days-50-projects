@@ -1,0 +1,108 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Mulish&display=swap');
+
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     min-height: 100vh;
+     width: 100vw;
+     font-family: 'Mulish', sans-serif;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background: #22668D;
+     color: #FFFADD;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {}
+
+
+.container {
+     text-align: center;
+     margin: 0 auto;
+}
+
+.cup {
+     background-color: #ffffff;
+     color: #000;
+     border: 2px solid black;
+     border-radius: 0 0 12px 12px;
+     margin: 0 auto;
+}
+
+.cup-big {
+     height: 350px;
+     width: 150px;
+     border-radius: 0 0 22px 22px;
+     display: flex;
+     overflow: hidden;
+     flex-direction: column;
+     justify-content: space-between;
+}
+
+.cup-big>div {
+     justify-self: center;
+}
+
+.percentage {
+     background: #8ECDDD;
+     height: 0%;
+     color: white;
+     font-weight: 600;
+     font-size: 1.3rem;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+
+.cups {
+     display: flex;
+     flex-wrap: wrap;
+}
+
+.cup-small {
+     height: 130px;
+     width: 90px;
+     margin: 10px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     cursor: pointer;
+}
+
+.cup-small.filled {
+     background: #8ECDDD;
+     color: white;
+}
+
+footer {}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
