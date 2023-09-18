@@ -1,0 +1,104 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     height: 100vh;
+     background-image: url(../imagecompressor/pexels-craig-adderley-1563356-min.jpg);
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     transition: all .6s ease-in;
+}
+
+body::after {
+     content: '';
+     background-color: rgba(0, 0, 0, .6);
+     position: absolute;
+     width: 100vw;
+     height: 100vh;
+     top: 0;
+     left: 0;
+     z-index: -1;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {}
+
+.slider-container {
+     height: 70vh;
+     width: 70vw;
+     position: relative;
+     overflow: hidden;
+     box-shadow: 0 6px 10px rgba(0, 0, 0, .3),
+          0 6px 10px rgba(0, 0, 0, .6);
+}
+
+.slide {
+     position: absolute;
+     height: 100vh;
+     width: 100vw;
+     background-size: cover;
+     background-position: center;
+     background-repeat: no-repeat;
+     z-index: 1;
+     transition: all .6s ease-in;
+     top: -15vh;
+     left: -15vw;
+     opacity: 0;
+}
+
+.slide.active {
+     opacity: 1;
+}
+
+.arrow {
+     position: fixed;
+     padding: .5em;
+     font-size: 2rem;
+     border: 2px solid green;
+     background: transparent;
+     color: #FFF;
+     top: 50%;
+     transform: translateY(-50%);
+     cursor: pointer;
+}
+
+.arrow-right {
+     right: calc(15vw - 3.3rem)
+}
+
+.arrow-left {
+     left: calc(15vw - 3.3rem)
+}
+
+footer {}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
