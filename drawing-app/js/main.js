@@ -6,8 +6,6 @@ const sizePlus = document.querySelector('.increase')
 const sizeMinus = document.querySelector('.decrease')
 const span = document.querySelector('span')
 
-
-let color = input.value
 let size = 10
 let isPressed = false
 let x;
@@ -43,7 +41,7 @@ canvas.addEventListener('mousemove', (e) => {
 function drawCircle(x, y) {
     ctx.beginPath();
     ctx.arc(x, y, size, 0, Math.PI * 2)
-    ctx.fillStyle = color
+    ctx.fillStyle = input.value
     ctx.fill()
 }
 
@@ -51,7 +49,7 @@ function drawLine(x1, y1, x2, y2) {
     ctx.beginPath()
     ctx.moveTo(x1, y1)
     ctx.lineTo(x2, y2)
-    ctx.strokeStyle = color
+    ctx.strokeStyle = input.value
     ctx.lineWidth = size * 2
     ctx.stroke()
 }
