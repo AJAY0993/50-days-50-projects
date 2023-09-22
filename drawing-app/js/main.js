@@ -1,6 +1,10 @@
 const canvas = document.getElementById("canvas");
 const ctx = canvas.getContext("2d");
 const input = document.querySelector('input')
+const clear = document.querySelector('.clear')
+const sizePlus = document.querySelector('.increase')
+const sizeMinus = document.querySelector('.decrease')
+const span = document.querySelector('span')
 
 
 let color = input.value
@@ -52,3 +56,17 @@ function drawLine(x1, y1, x2, y2) {
     ctx.stroke()
 }
 
+sizePlus.addEventListener('click', () => {
+    if (size === 50) { size += 0 }
+    else { size += 5 }
+    span.innerText = size
+})
+sizeMinus.addEventListener('click', () => {
+    if (size === 5) { size -= 0 }
+    else {
+        size -= 5
+    }
+    span.innerText = size
+})
+
+clear.addEventListener('click', () => location.reload())
