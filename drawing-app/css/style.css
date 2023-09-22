@@ -63,6 +63,21 @@ canvas {
      margin-left: auto;
 }
 
+.small-device {
+     display: none;
+}
+
+@media (max-width:800px) {
+
+     canvas,
+     .toolbar {
+          display: none;
+     }
+
+     .small-device {
+          display: block;
+     }
+}
 footer {}
 
 /******************************************
