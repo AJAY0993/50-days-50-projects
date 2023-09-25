@@ -1,0 +1,134 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     color: #222;
+     font-family: 'Poppins', sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+.nav {
+     position: fixed;
+     top: 0;
+     left: 0;
+     right: 0;
+     background-color: #fff;
+     color: #000;
+     transition: all .3s ease-in-out;
+}
+
+.container {
+     max-width: 1600px;
+     margin: 0 auto;
+}
+
+.nav .container {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 20px 1rem;
+}
+
+ul {
+     display: flex;
+     gap: 2rem;
+     list-style: none;
+}
+
+.nav.active .container {
+     padding: 10px 1rem;/
+}
+
+.nav.active {
+     color: #fff;
+     background-color: #000;
+}
+
+.nav a {
+     text-decoration: none;
+     color: inherit;
+     font-weight: bold;
+
+     transition: all .3s ease-in;
+}
+
+.nav a.active,
+a:hover {
+
+     color: red;
+}
+
+.hero {
+     background-image: url('https://t4.ftcdn.net/jpg/04/03/62/35/240_F_403623508_OhrbkZ1zc2NzB9mN1d2ZcO1WrBDGKsxY.jpg');
+     background-size: cover;
+     background-repeat: no-repeat;
+     height: 100vh;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+     margin-bottom: 1rem;
+     flex-direction: column;
+     position: relative;
+     z-index: -2;
+     color: #fff;
+}
+
+.hero::before {
+     content: '';
+     position: absolute;
+     height: 100%;
+     width: 100%;
+     top: 0;
+     left: 0;
+     background: rgba(0, 0, 0, 0.6);
+     z-index: -1;
+}
+
+.hero h1 {
+     font-size: 3rem
+}
+
+.section h1 {
+     margin: 1rem 0;
+     font-size: 1.5rem;
+     color: #000;
+}
+
+.section p {
+     color: #555;
+     letter-spacing: 1.2;
+}
+
+footer {}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
