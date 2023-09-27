@@ -1,0 +1,91 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     background-color: #FF6969;
+     height: 100vh;
+     font-family: 'Poppins', sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {}
+
+.toasts {
+     position: fixed;
+     bottom: 1rem;
+     right: 1rem;
+}
+
+button {
+     padding: 1rem 1.5rem;
+     border: none;
+     color: #FF6969;
+     border-radius: 12px;
+     cursor: pointer;
+     transition: all .3s ease-in-out;
+}
+
+button:active {
+     transform: scale(.9);
+}
+
+.toast {
+     background: #fff;
+     color: #FF6969;
+     padding: .5rem 1rem;
+     margin: 1em;
+     border-radius: 8px;
+
+}
+
+.success {
+     color: green;
+}
+
+.error {
+     color: red;
+}
+
+.info {
+     color: purple;
+}
+
+.cool-down {
+     color: #FF6969;
+}
+
+footer {}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
