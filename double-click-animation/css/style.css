@@ -1,0 +1,66 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {}
+
+h3,
+h1 {
+     text-align: center;
+}
+
+.like-me {
+     height: 300px;
+     width: 200px;
+     background: url('http://m.gettywallpapers.com/wp-content/uploads/2022/06/Eren-Yeager-4k-HD-Wallpaper-864x1536.jpg');
+     background-size: cover;
+     margin: 0 auto;
+     position: relative;
+}
+
+
+.fa-heart {
+     position: absolute;
+     color: red;
+     animation: heart .6s linear;
+     transform: translate(-50%, 50%) scale(0);
+}
+
+@keyframes heart {
+     to {
+          transform: translate(-50%, 50%) scale(9);
+          opacity: 0;
+     }
+
+}
+
+footer {}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
