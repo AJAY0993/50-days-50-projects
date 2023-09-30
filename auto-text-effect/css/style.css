@@ -1,0 +1,64 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     background-color: blanchedalmond;
+     font-family: 'Poppins', sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {}
+
+div {
+     justify-self: flex-end;
+     background-color: rgba(0, 0, 0, 0.1);
+     padding: 1em;
+}
+
+input {
+     background: blanchedalmond;
+     border: none;
+     font-size: 18px;
+     padding: .3em;
+}
+
+input:focus {
+     outline: 0;
+}
+
+footer {}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
