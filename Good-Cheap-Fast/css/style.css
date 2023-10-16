@@ -1,0 +1,89 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+     clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     font-family: 'Poppins', sans-serif;
+}
+
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+header {}
+
+.toggle {
+     visibility: hidden;
+}
+
+.toggle-container {
+     display: flex;
+     width: 200px;
+     align-items: center;
+     justify-content: center;
+     margin: 1rem 0;
+}
+
+.toggle-container label {
+     height: 40px;
+     width: 80px;
+     background-color: rgb(177, 175, 175);
+     display: inline-block;
+     border-radius: 2rem;
+     position: relative;
+     cursor: pointer;
+     align-items: center;
+     justify-content: center;
+     margin-right: 1rem;
+}
+
+.circle {
+     position: absolute;
+     height: 34px;
+     width: 34px;
+     border-radius: 50%;
+     top: 3px;
+     left: 3px;
+     background: #fff;
+     transition: all .3s ease-in;
+}
+
+.toggle:checked+label {
+     background: skyblue;
+}
+
+.toggle:checked+label>.circle {
+     left: 43px;
+}
+
+footer {}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
